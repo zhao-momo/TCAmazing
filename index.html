@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCAmazing - 浏览器插件介绍</title>
+    <style>
+        /* 基本样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0.5rem;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ff6b6b;
+        }
+
+        #hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1rem;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+            background: #fff;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            flex-basis: 30%;
+            margin: 1rem;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem 0;
+            background: #ff6b6b;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e54d4d;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu7CfMIzIBv4jCBuyA.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TCAmazing 浏览器插件</h1>
+            <nav>
+                <ul>
+                    <li><a href="#features">特点</a></li>
+                    <li><a href="#how-it-works">工作原理</a></li>
+                    <li><a href="#download">下载</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>让您的浏览体验更加美好</h2>
+            <p>TCAmazing 是一款强大且易用的浏览器插件，帮助您美化某网站。</p>
+            <a href="#download" class="btn">立即下载</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2>主要特点</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>个性化定制</h3>
+                    <p>根据您的喜好调整网站主题、颜色和布局。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>增强视觉效果</h3>
+                    <p>通过高质量的图像和动画提升网站的美观度。</p>
+                </div>
+                <div class="feature-item">
+                    <h3>简化导航</h3>
+                    <p>优化导航栏，使浏览更便捷。</p>
+                </div>
+                <!-- 可以添加更多特点 -->
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="container">
+            <h2>工作原理</h2>
+            <p>TCAmazing 插件会在您访问特定网站时自动激活，并应用预设的美化规则。用户还可以自定义这些规则，以满足个性化需求。</p>
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="container">
+            <h2>下载 TCAmazing</h2>
+            <p>现在就下载 TCAmazing，开始美化您的浏览体验吧！</p>
+            <a href="#" class="btn">前往 Chrome Web Store</a>
+            <a href="#" class="btn">前往 Firefox Add-ons</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TCAmazing | 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in effect for sections when they enter the viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
